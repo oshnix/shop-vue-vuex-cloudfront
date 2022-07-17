@@ -1,6 +1,6 @@
 {
   "name": "shop-vue-vuex-cloudfront",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "author": "JSCC",
   "scripts": {
@@ -11,17 +11,10 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "client:deploy": "sls client deploy --no-config-change --no-policy-change --no-cors-change",
-    "client:deploy:nc": "npm run client:deploy -- --no-confirm",
-    "client:build:deploy": "npm run build && npm run client:deploy",
-    "client:build:deploy:nc": "npm run build && npm run client:deploy:nc",
+    "deploy": "npm run build && npm run cloudfront:setup && npm run client:deploy -- --no-confirm && npm run cloudfront:invalidateCache",
+    "client:deploy": "sls client deploy --no-policy-change",
     "cloudfront:setup": "sls deploy",
-    "cloudfront:domainInfo": "sls domainInfo",
-    "cloudfront:invalidateCache": "sls invalidateCloudFrontCache",
-    "cloudfront:build:deploy": "npm run client:build:deploy && npm run cloudfront:invalidateCache",
-    "cloudfront:build:deploy:nc": "npm run client:build:deploy:nc && npm run cloudfront:invalidateCache",
-    "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
-    "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc"
+    "cloudfront:invalidateCache": "sls invalidateCloudFrontCache"
   },
   "dependencies": {
     "@mdi/font": "^5.9.55",

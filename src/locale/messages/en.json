@@ -1,6 +1,6 @@
 {
     "app": {
-        "title": "My store!",
+        "title": "Mocked store with automatic configuration",
         "loading": "Loading... Please wait"
     },
     "common": {

@@ -1,36 +1,12 @@
 # shop-vue-vuex-cloudfront
 
-See `develop` branch for development
+## Deployment
 
-## Project setup
-```
-npm install
-```
+### Automatically created
+AWS S3 URL: http://oshnix-static-website-serverless.s3-website-eu-west-1.amazonaws.com     
+AWS CloudFront URL: http://dtcqr3jir4q2g.cloudfront.net      
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Manually created
+*Contains previous version*     
+AWS S3 URL: http://oshnix-static-website.s3-website.eu-north-1.amazonaws.com     
+AWS CloudFront URL: http://d2rhxvmkex27ej.cloudfront.net
